@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý cửa Hàng</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">T FOOD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal Đăng nhập -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form nhập thông tin đăng nhập -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Tên người dùng:</label>
+                            <input type="text" class="form-control" id="username" placeholder="Nhập tên người dùng">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Mật khẩu:</label>
+                            <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                Loại Hàng
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">
+                                Sản Phẩm
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="oder.html ">
+                                Đơn hàng
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Khách hàng
+                            </a>
+                        </li>
+                        <!-- Add more menu items as needed -->
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Content -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <div class="content">
+                    <!-- Your content goes here -->
+                    <div class="container">
+                        <h2>Quản lý khách hàng</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tên khách hàng</th>
+                                    <th>Email</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>nguyenvana@gmail.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#viewModal">Xem chi tiết</button>
+                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#editModal">Sửa</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Xóa</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>nguyenvana@gmail.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#viewModal">Xem chi tiết</button>
+                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#editModal">Sửa</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Xóa</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>nguyenvana@gmail.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#viewModal">Xem chi tiết</button>
+                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#editModal">Sửa</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Xóa</button>
+                                    </td>
+                                </tr>
+                                <!-- Thêm dòng dữ liệu mẫu cần thiết -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- View Modal -->
+                    <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="viewModalLabel">Chi tiết khách hàng</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Nội dung chi tiết khách hàng -->
+                                    <p>ID: 1</p>
+                                    <p>Tên khách hàng: Nguyễn Văn A</p>
+                                    <p>Email: nguyenvana@gmail.com</p>
+                                    <p>Số điện thoại: 0123456789</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Edit Modal -->
+                    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editModalLabel">Sửa thông tin khách hàng</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="editCustomerName" class="form-label">Tên khách hàng:</label>
+                                            <input type="text" class="form-control" id="editCustomerName"
+                                                placeholder="Nhập tên khách hàng">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editCustomerEmail" class="form-label">Email:</label>
+                                            <input type="email" class="form-control" id="editCustomerEmail"
+                                                placeholder="Nhập địa chỉ email">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editCustomerPhone" class="form-label">Số điện thoại:</label>
+                                            <input type="tel" class="form-control" id="editCustomerPhone"
+                                                placeholder="Nhập số điện thoại">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Trang Admin - Toanntpc06797@fpt.edu.vn</p>
+      </div>
+    <!-- Bootstrap JS and dependencies (Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
