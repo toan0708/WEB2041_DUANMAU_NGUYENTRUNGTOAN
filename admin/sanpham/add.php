@@ -14,6 +14,8 @@
                                 <th>Tên sản phẩm</th>
                                 <th>Hình ảnh</th>
                                 <th>Giá</th>
+                                <th>Mô tả</th>
+                                <th>Số lược xem</th>
 
                                 <th>Thao tác</th>
                             </tr>
@@ -24,6 +26,8 @@
                                 <td>Cam</td>
                                 <td><img src="../img/best-product-1.jpg" style="width: 80px;" alt="" srcset=""></td>
                                 <td>200000đ / kg</td>
+                                <td>cc</td>
+                                <td>cc</td>
                                 <td>
                                     <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#editModal">Sửa</button>
