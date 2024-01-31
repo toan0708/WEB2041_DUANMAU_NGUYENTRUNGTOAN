@@ -105,23 +105,45 @@
                             </div>
                             <div class="modal-body">
                                 <!-- Form nhập thông tin sản phẩm mới -->
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="productName" class="form-label">Tên sản phẩm:</label>
-                                        <input type="text" class="form-control" id="productName"
-                                            placeholder="Nhập tên sản phẩm">
+                                <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                        <label for="productName" class="form-label">Danh muc:</label>
+                                        <select name="iddm" id="">
+                                            <?
+                                            foreach ($dsdanhmuc as $danhmuc) {
+                                               extract($danhmuc);
+                                               echo ' <option value="'.$id.'">'.$name.'</option>';
+                                            }
+                                            ?>
+                                            <option value=""></option>
+                                        </select>
+                                        <!-- <input type="text" class="form-control" id="tensp"
+                                            placeholder="Nhập tên sản phẩm"> -->
                                     </div>
                                     <div class="mb-3">
-                                        <label for="productName" class="form-label">Hình ảnh:</label>
-                                        <input type="file" class="form-control" id="productImg"
+                                        <label for="productName" class="form-label">Tên sản phẩm:</label>
+                                        <input type="text" class="form-control" name="tensp"
                                             placeholder="Nhập tên sản phẩm">
                                     </div>
                                     <div class="mb-3">
                                         <label for="productPrice" class="form-label">Giá:</label>
-                                        <input type="text" class="form-control" id="productPrice"
+                                        <input type="text" class="form-control" name="giasp"
                                             placeholder="Nhập giá sản phẩm">
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+                                    <div class="mb-3">
+                                        <label for="productName" class="form-label">Hình ảnh:</label>
+                                        <input type="file" class="form-control" name="hinhsp"
+                                            placeholder="Nhập tên sản phẩm">
+                                    </div>
+                                   
+                                    <div class="mb-3">
+                                        <label for="productName">Mo ta:</label>
+                                        <textarea class="form-label" name="motasp" id="" cols="30" rows="10"></textarea>
+                                        <!-- <input type="text" class="form-control" id="motasp"
+                                            placeholder="Nhập tên sản phẩm"> -->
+                                    </div>
+                                    <input type="submit" name="themmoi" class="btn btn-primary" value="them san pham" />
+                                    <!-- <button type="submit" class="btn btn-primary">Thêm sản phẩm</button> -->
                                 </form>
                             </div>
                         </div>
